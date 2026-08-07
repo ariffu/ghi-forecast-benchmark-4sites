@@ -1,5 +1,7 @@
 # GHI Forecast Benchmark — 4 Sites (Bengkulu, Banten, Kalimantan Barat, Jambi)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21833225.svg)](https://doi.org/10.5281/zenodo.21833225)
+
 Harmonised benchmark scripts and per-site result summaries for the GHI
 (Global Horizontal Irradiance) forecasting study across four Indonesian
 sites. Prepared as supplementary material for the associated dissertation
@@ -34,3 +36,8 @@ each site's `outputs_*` folders.
 Scripts expect a local or MotherDuck-hosted DuckDB database per site
 (`MOTHERDUCK_TOKEN` environment variable, or a local `.duckdb` file — see
 individual script headers for connection details).
+
+## Citation
+
+Archived releases of this repository are permanently citable via Zenodo:
+[10.5281/zenodo.21833225](https://doi.org/10.5281/zenodo.21833225).
