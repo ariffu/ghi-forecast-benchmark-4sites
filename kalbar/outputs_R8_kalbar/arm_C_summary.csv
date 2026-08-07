@@ -1,0 +1,2 @@
+location,n_features_baseline,n_features_pruned,reduction_pct,r2_baseline_val,r2_pruned_test,delta_r2,top_features
+Kalbar,50,31,38.0,0.6795718757650264,0.7272577359704591,-0.04768586020543264,"ghi_lag_10m, ghi_lag_20m, ghi_lag_120m, ghi_lag_180m, ghi_roll_60m_mean"

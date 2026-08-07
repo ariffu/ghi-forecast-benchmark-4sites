@@ -1,0 +1,11 @@
+feature
+ghi_cs_t60
+elev_sin_t60
+clp_cot
+hour_sin
+smart_persist
+clp_cot_lag_10m
+doy_sin
+hour_cos
+clp_ctt_k
+clp_cot_delta_30m

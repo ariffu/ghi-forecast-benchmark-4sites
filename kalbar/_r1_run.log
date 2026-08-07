@@ -1,0 +1,45 @@
+Loading Kalbar data...
+Total rows: 81,851 | 2022-01-01..2025-12-31
+Rows after filter: point=81,851 avg=81,851
+
+========================================================
+TARGET: point_t60
+========================================================
+  train=39,759 val=20,706 test=21,386
+  SP R2=0.5614 MAE=137.9
+  LGBM iter=403 R2=0.7233 MAE=120.7 skill=0.2057
+  CatB iter=506 R2=0.7278 MAE=120.0 skill=0.2122
+
+========================================================
+TARGET: avg_t10_t60
+========================================================
+  train=39,759 val=20,706 test=21,386
+  SP R2=0.7073 MAE=113.1
+  LGBM iter=547 R2=0.8616 MAE=77.0 skill=0.3123
+  CatB iter=733 R2=0.8628 MAE=77.0 skill=0.3154
+
+========================================================
+WALK-FORWARD 5-FOLD (lgbm_residual x point)
+========================================================
+  Fold 1 [2023-01..2023-07] n_tr=15,048 n_te=10,121 iter=49 R2=0.6110 MAE=147.1 skill=0.1268
+  Fold 2 [2023-07..2024-01] n_tr=23,544 n_te=11,095 iter=364 R2=0.6420 MAE=136.7 skill=0.1340
+  Fold 3 [2024-01..2024-07] n_tr=34,124 n_te=10,468 iter=102 R2=0.6664 MAE=134.0 skill=0.1928
+  Fold 4 [2024-07..2025-01] n_tr=44,983 n_te=10,238 iter=483 R2=0.6684 MAE=129.8 skill=0.2048
+  Fold 5 [2025-01..end] n_tr=55,213 n_te=21,386 iter=512 R2=0.7263 MAE=120.0 skill=0.2101
+
+--- WF summary ---
+  r2          : 0.6628 +/- 0.0424
+  mae         : 133.5348 +/- 9.8941
+  rmse        : 184.5522 +/- 12.9308
+  skill_vs_sp : 0.1737 +/- 0.0401
+
+--- HEADLINE (test 2025) ---
+            model      target     r2   mae  rmse  skill_vs_sp
+smart_persistence   point_t60 0.5614 137.9 210.2       0.0000
+    lgbm_residual   point_t60 0.7233 120.7 167.0       0.2057
+  catboost_direct   point_t60 0.7278 120.0 165.6       0.2122
+smart_persistence avg_t10_t60 0.7073 113.1 158.3       0.0000
+    lgbm_residual avg_t10_t60 0.8616  77.0 108.8       0.3123
+  catboost_direct avg_t10_t60 0.8628  77.0 108.3       0.3154
+
+Outputs -> outputs_R1_kalbar/

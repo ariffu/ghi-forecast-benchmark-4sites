@@ -1,0 +1,49 @@
+======================================================================
+R8 COMPREHENSIVE BENCHMARK � KALBAR
+======================================================================
+
+Loading Kalbar data...
+Total rows: 81,851 | Filtered point: 81,851, avg: 81,851
+
+======================================================================
+ARM A: FEATURE ENGINEERING (F1 vs F2)
+======================================================================
+
+point_t60 � F1:
+  CatBoost F1: R�=0.7283
+
+point_t60 � F2:
+  CatBoost F2: R�=0.7284
+
+avg_t10_t60 � F1:
+  CatBoost F1: R�=0.8639
+
+avg_t10_t60 � F2:
+  CatBoost F2: R�=0.8642
+
+-> Saved: arm_A_results.csv
+
+======================================================================
+ARM B: MODEL ARCHITECTURE (GBM vs DL)
+======================================================================
+Device: cpu
+
+GBM Models:
+  catboost: R�=0.7283
+  lgbm: R�=0.7264
+
+DL Models (1 seed for prototype � will expand to 5 in batch-run):
+Traceback (most recent call last):
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 491, in <module>
+    main()
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 445, in main
+    model = train_dl_model(model, train_loader, val_loader, device, patience=30)
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 276, in train_dl_model
+    y_pred = model(X_batch).squeeze()
+  File "C:\Users\ariff\AppData\Roaming\Python\Python39\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\ariff\AppData\Roaming\Python\Python39\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 104, in forward
+    _, (h2, _) = self.lstm2(h1.unsqueeze(0).repeat(x.size(0), 1, 1))
+RuntimeError: Number of dimensions of repeat dims can not be smaller than number of dimensions of tensor

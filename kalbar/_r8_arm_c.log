@@ -1,0 +1,22 @@
+======================================================================
+ARM C: VALIDATION-GUIDED PRUNING
+======================================================================
+Train: 39,759, Val: 20,706, Test: 21,386
+
+[Baseline] 50 F1 features
+Traceback (most recent call last):
+  File "C:\Users\ariff\DuckDB_kalbar\run_r8_arm_c_pruning.py", line 178, in <module>
+    main()
+  File "C:\Users\ariff\DuckDB_kalbar\run_r8_arm_c_pruning.py", line 89, in main
+    m_base = fit(F1_FEATURES)
+  File "C:\Users\ariff\DuckDB_kalbar\run_r8_arm_c_pruning.py", line 77, in fit
+    m.fit(impute(train, feats), y_tr, eval_set=(impute(val, feats), y_va))
+  File "C:\Users\ariff\DuckDB_kalbar\run_r8_arm_c_pruning.py", line 67, in impute
+    X = df_[feats].copy()
+  File "C:\Users\ariff\AppData\Roaming\Python\Python39\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "C:\Users\ariff\AppData\Roaming\Python\Python39\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\ariff\AppData\Roaming\Python\Python39\site-packages\pandas\core\indexes\base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['ghi_now', 'ghi_lag_10m', 'ghi_lag_20m', 'ghi_lag_30m', 'ghi_lag_60m', 'ghi_lag_120m', 'ghi_lag_180m', 'ghi_roll_30m_mean', 'ghi_roll_30m_std', 'ghi_roll_60m_mean', 'ghi_roll_60m_std', 'ghi_roll_180m_mean', 'ghi_roll_180m_std', 'ghi_delta_10m', 'ghi_delta_60m', 'accel_ghi_20m', 'kt_now', 'kt_lag_10m', 'kt_lag_20m', 'kt_lag_30m', 'kt_lag_60m', 'accel_kt_20m', 'clp_cot', 'clp_cot_lag_10m', 'clp_cot_lag_20m', 'clp_cot_lag_30m', 'clp_cot_lag_60m', 'clp_cot_delta_10m', 'clp_cot_delta_30m', 'clp_cot_delta_60m', 'clp_cot_delta_180m', 'clp_cot_roll_180m_mean', 'accel_clp_cot_20m', 'clp_cth_m', 'clp_ctt_k', 'clp_cer', 'clp_cloud_present', 'month_sin', 'month_cos', 'ghi_cs_t60', 'elev_sin_t60', 'smart_persist', 'smart_persist_avg'] not in index"

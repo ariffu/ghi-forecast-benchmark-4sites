@@ -1,0 +1,42 @@
+Device: cpu
+DB reference: C:\Users\ariff\DuckDB_jambi\jambi_ghi_forecast_1h_train_3h_rollback_2021_2025.duckdb  (schema=jambi_sch, table=ghi_forecast_1h_train_3h_rollback_2021_2025)
+Rebuilding dataset from SQL (v2, 24h-penuh, cache numpy-incompatible)...
+Data source: LOCAL  (jambi_ghi_forecast_1h_train_3h_rollback_2021_2025.duckdb)
+Rows: 91,409  (t=1s)
+train=52,108  val=18,172  test=21,129
+
+============================================================
+GBM MODELS (verifikasi ulang vs run sesi sebelumnya)
+============================================================
+  Training CatBoost...
+  CatBoost  R2=0.6928  MAE=108.7  RMSE=150.2  iter=893  (referensi sebelumnya: 0.6928)
+  Training LightGBM...
+  LightGBM  R2=0.6937  MAE=108.8  RMSE=150.0  (referensi sebelumnya: 0.6937)
+
+============================================================
+DL MODELS  (3 seeds)
+============================================================
+  (seq_len=1 -- DL sees same 50 pre-processed features as GBM)
+    lstm seed 0: R2=0.6493  (t=243s)
+    lstm seed 1: R2=0.6498  (t=439s)
+    lstm seed 2: R2=0.6512  (t=638s)
+  lstm          R2=0.6501 +/- 0.0008
+    mlp seed 0: R2=0.6099  (t=749s)
+    mlp seed 1: R2=0.6091  (t=853s)
+    mlp seed 2: R2=0.6087  (t=949s)
+  mlp           R2=0.6092 +/- 0.0005
+    transformer seed 0: R2=0.6808  (t=1341s)
+    transformer seed 1: R2=0.6810  (t=1788s)
+    transformer seed 2: R2=0.6807  (t=2507s)
+  transformer   R2=0.6808 +/- 0.0001
+
+============================================================
+SUMMARY -- R8 Arm B v2 JAMBI (point t+60, test 2025, n=21,129)
+============================================================
+  GBM: CatBoost R2=0.6928 | LightGBM R2=0.6937 (delta +0.0009)
+  DL lstm         R2=0.6501 +/- 0.0010  (delta vs CatBoost: -0.0427)
+  DL mlp          R2=0.6092 +/- 0.0006  (delta vs CatBoost: -0.0836)
+  DL transformer  R2=0.6808 +/- 0.0002  (delta vs CatBoost: -0.0120)
+
+  -> outputs: outputs_R8_jambi_v2/arm_B_results_v2_full.csv, arm_B_summary_v2_full.csv
+  Total time: 2507s

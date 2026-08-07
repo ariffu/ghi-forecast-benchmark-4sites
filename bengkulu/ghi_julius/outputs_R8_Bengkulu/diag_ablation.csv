@@ -1,0 +1,9 @@
+label,n,r2
+F1 baseline,50,0.792
+F1+RAD_raw,56,0.7704
+F1+RAD+derived,60,0.7621
+F1+AWS,59,0.7916
+F_super_all,69,0.7614
+F1_top20_by_F1imp,20,0.792
+F1_top30_by_F1imp,30,0.7912
+F1_top40_by_F1imp,40,0.7917

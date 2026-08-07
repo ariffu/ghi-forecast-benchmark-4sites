@@ -1,0 +1,49 @@
+┌─────────┬──────────────────────────┬──────────────────────────┐
+│    t    │       column_name        │        data_type         │
+│ varchar │         varchar          │         varchar          │
+├─────────┼──────────────────────────┼──────────────────────────┤
+│ asrs    │ DHI                      │ DOUBLE                   │
+│ asrs    │ DNI                      │ DOUBLE                   │
+│ asrs    │ DNI_rad                  │ DOUBLE                   │
+│ asrs    │ GHI                      │ DOUBLE                   │
+│ asrs    │ RECORD                   │ VARCHAR                  │
+│ asrs    │ Sunshine_minutes         │ VARCHAR                  │
+│ asrs    │ TIMESTAMP                │ TIMESTAMP                │
+│ asrs    │ Tanggal                  │ TIMESTAMP WITH TIME ZONE │
+│ asrs    │ azimuth_deg              │ VARCHAR                  │
+│ asrs    │ closure_qc_flag          │ VARCHAR                  │
+│ asrs    │ data_note                │ VARCHAR                  │
+│ asrs    │ date                     │ BIGINT                   │
+│ asrs    │ date_time_local          │ TIMESTAMP                │
+│ asrs    │ dhi_method               │ VARCHAR                  │
+│ asrs    │ dhi_qc_flag              │ VARCHAR                  │
+│ asrs    │ dhi_w_m2                 │ DOUBLE                   │
+│ asrs    │ dhi_w_m2_corrected       │ DOUBLE                   │
+│ asrs    │ diffuse_rad              │ DOUBLE                   │
+│ asrs    │ diffuse_rad_round        │ DOUBLE                   │
+│ asrs    │ diffuse_rad_round_flag   │ DOUBLE                   │
+│  ·      │       ·                  │   ·                      │
+│  ·      │       ·                  │   ·                      │
+│  ·      │       ·                  │   ·                      │
+│ asrs    │ reflected_rad            │ DOUBLE                   │
+│ asrs    │ reflected_rad_round      │ DOUBLE                   │
+│ asrs    │ reflected_rad_round_flag │ DOUBLE                   │
+│ asrs    │ reflected_w_m2           │ DOUBLE                   │
+│ asrs    │ reflected_w_m2_corrected │ DOUBLE                   │
+│ asrs    │ reflective_rad           │ DOUBLE                   │
+│ asrs    │ solar_elev_deg           │ DOUBLE                   │
+│ asrs    │ source_file              │ VARCHAR                  │
+│ asrs    │ source_table             │ VARCHAR                  │
+│ asrs    │ sundir                   │ DOUBLE                   │
+│ asrs    │ sundir_altitude          │ DOUBLE                   │
+│ asrs    │ sundir_altitude_flag     │ DOUBLE                   │
+│ asrs    │ sundir_azimuth           │ DOUBLE                   │
+│ asrs    │ sundir_azimuth_flag      │ DOUBLE                   │
+│ asrs    │ sunshine                 │ BIGINT                   │
+│ asrs    │ sunshine_min             │ DOUBLE                   │
+│ asrs    │ sunshine_minutes_flag    │ DOUBLE                   │
+│ asrs    │ timestamp_wib            │ TIMESTAMP WITH TIME ZONE │
+│ asrs    │ ts_wib                   │ TIMESTAMP                │
+│ asrs    │ year                     │ BIGINT                   │
+└─────────┴──────────────────────────┴──────────────────────────┘
+  61 rows (40 shown)                                  3 columns

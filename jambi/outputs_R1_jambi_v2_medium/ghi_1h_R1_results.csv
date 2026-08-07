@@ -1,0 +1,7 @@
+model,target,n,r2,mae,rmse,skill_vs_sp,best_iter
+smart_persistence,point_t60,21129,0.4266,142.0,205.2,0.0,
+lgbm_residual,point_t60,21129,0.6931,108.9,150.1,0.2683,186.0
+catboost_direct,point_t60,21129,0.6932,108.8,150.1,0.2685,461.0
+smart_persistence,avg_t10_t60,21098,0.6495,99.8,147.0,0.0,
+lgbm_residual,avg_t10_t60,21098,0.8541,66.9,94.9,0.3548,180.0
+catboost_direct,avg_t10_t60,21098,0.8561,66.7,94.2,0.3592,624.0

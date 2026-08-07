@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.duckdb
+*.db
+*.db.bak
+*.parquet
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.zip
+*.7z
+.env
+.claude/

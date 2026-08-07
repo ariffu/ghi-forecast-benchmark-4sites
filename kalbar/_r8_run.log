@@ -1,0 +1,30 @@
+======================================================================
+R8 COMPREHENSIVE BENCHMARK � KALBAR
+======================================================================
+
+Loading Kalbar data...
+Total rows: 81,851 | Filtered point: 81,851, avg: 81,851
+
+======================================================================
+ARM A: FEATURE ENGINEERING (F1 vs F2)
+======================================================================
+
+point_t60 � F1:
+  CatBoost F1: R�=0.7283
+
+point_t60 � F2:
+  CatBoost F2: R�=0.7284
+
+avg_t10_t60 � F1:
+  CatBoost F1: R�=0.8639
+
+avg_t10_t60 � F2:
+  CatBoost F2: R�=0.8642
+Traceback (most recent call last):
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 491, in <module>
+    main()
+  File "C:\Users\ariff\DuckDB_kalbar\train_ghi_1h_kalbar_R8_comprehensive.py", line 372, in main
+    print(f"\n\u2192 Saved: arm_A_results.csv")
+  File "C:\Program Files\Python39\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 2: character maps to <undefined>

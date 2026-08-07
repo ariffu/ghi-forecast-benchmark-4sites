@@ -1,0 +1,41 @@
+R8 Arm C — Jambi: top-K pruning dari F1 lean-50
+Building harmonised dataset (R1 builder)...
+Rows: 38,706  (train=22,166 val=7,029 test=9,511)
+
+Training CatBoost full F1-50...
+  full-50: R2=0.6757  MAE=114.4
+
+Top 20 importance:
+   11.28  ghi_cs_t60
+    8.92  elev_sin_t60
+    8.11  clp_cot
+    7.94  hour_sin
+    7.71  smart_persist
+    4.14  clp_cot_lag_10m
+    2.96  doy_sin
+    2.79  hour_cos
+    2.58  clp_ctt_k
+    2.55  clp_cot_delta_30m
+    2.40  clp_cer
+    2.22  doy_cos
+    2.12  clp_cot_delta_180m
+    2.09  clp_cth_m
+    2.03  clp_cot_lag_20m
+    2.00  clp_cot_delta_10m
+    1.72  ghi_roll_180m_mean
+    1.63  clp_cot_delta_60m
+    1.53  ghi_roll_180m_std
+    1.45  clp_cot_lag_30m
+
+Top-K sweep:
+  K= 10: R2=0.6751  MAE=114.9  (delta vs full: -0.0006)
+  K= 15: R2=0.6762  MAE=114.8  (delta vs full: +0.0005)
+  K= 20: R2=0.6757  MAE=114.6  (delta vs full: +0.0000)
+  K= 25: R2=0.6745  MAE=114.8  (delta vs full: -0.0012)
+  K= 30: R2=0.6756  MAE=114.6  (delta vs full: -0.0001)
+  K= 35: R2=0.6748  MAE=114.7  (delta vs full: -0.0009)
+  K= 40: R2=0.6763  MAE=114.5  (delta vs full: +0.0006)
+
+K minimal (R2 >= full-0.001): K=10 (R2=0.6751 vs full 0.6757)
+
+-> outputs: outputs_R8_jambi/arm_C_topk_sweep.csv, arm_C_importance.csv

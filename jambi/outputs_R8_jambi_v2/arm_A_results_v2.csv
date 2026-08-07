@@ -1,0 +1,5 @@
+r2,mae,rmse,skill_vs_sp,target,features,model,n_features,best_iter
+0.6947,108.3,149.7,0.2704,point_t60,F1,catboost,50,802
+0.6925,108.8,150.3,0.2677,point_t60,F2,catboost,55,969
+0.856,66.5,94.3,0.359,avg_t10_t60,F1,catboost,50,1075
+0.8544,67.0,94.8,0.3556,avg_t10_t60,F2,catboost,55,1001

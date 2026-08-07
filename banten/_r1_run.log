@@ -1,0 +1,45 @@
+Loading Banten data...
+Total rows: 99,148 | 2022-01-01..2025-12-30
+Rows point=90,488 avg=90,488
+
+========================================================
+TARGET: point_t60
+========================================================
+  train=45,244 val=22,685 test=22,559
+  SP R2=0.4955 MAE=128.4
+  LGBM iter=234 R2=0.6760 MAE=105.8 skill=0.1985
+  CatB iter=628 R2=0.6818 MAE=104.6 skill=0.2058
+
+========================================================
+TARGET: avg_t10_t60
+========================================================
+  train=45,244 val=22,685 test=22,559
+  SP R2=0.7066 MAE=88.7
+  LGBM iter=314 R2=0.8322 MAE=68.0 skill=0.2438
+  CatB iter=754 R2=0.8345 MAE=67.6 skill=0.2489
+
+========================================================
+WALK-FORWARD 5-FOLD (lgbm_residual x point)
+========================================================
+  Fold 1 [2023-01..2023-07] n_tr=16,865 n_te=11,157 iter=232 R2=0.5460 MAE=131.5 skill=0.1973
+  Fold 2 [2023-07..2024-01] n_tr=28,300 n_te=11,465 iter=440 R2=0.6439 MAE=116.2 skill=0.2200
+  Fold 3 [2024-01..2024-07] n_tr=39,487 n_te=11,218 iter=331 R2=0.6539 MAE=106.9 skill=0.1929
+  Fold 4 [2024-07..2025-01] n_tr=50,984 n_te=11,467 iter=291 R2=0.6923 MAE=101.4 skill=0.2395
+  Fold 5 [2025-01..end] n_tr=62,172 n_te=22,559 iter=259 R2=0.6781 MAE=105.5 skill=0.2012
+
+--- WF summary ---
+  r2          : 0.6429 +/- 0.0574
+  mae         : 112.3137 +/- 12.0242
+  rmse        : 156.3296 +/- 15.7934
+  skill_vs_sp : 0.2102 +/- 0.0194
+
+--- HEADLINE (test 2025) ---
+            model      target     r2   mae  rmse  skill_vs_sp
+smart_persistence   point_t60 0.4955 128.4 185.0       0.0000
+    lgbm_residual   point_t60 0.6760 105.8 148.3       0.1985
+  catboost_direct   point_t60 0.6818 104.6 146.9       0.2058
+smart_persistence avg_t10_t60 0.7066  88.7 129.2       0.0000
+    lgbm_residual avg_t10_t60 0.8322  68.0  97.7       0.2438
+  catboost_direct avg_t10_t60 0.8345  67.6  97.0       0.2489
+
+Outputs -> outputs_R1_banten/

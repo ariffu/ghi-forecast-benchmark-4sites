@@ -1,0 +1,7 @@
+model,horizon,test_r2,test_mae
+LSTM_stage3,t+10min,0.8489,82.78
+LSTM_stage3,t+20min,0.80655,96.23
+LSTM_stage3,t+30min,0.77687,105.13
+LSTM_stage3,t+40min,0.75731,110.61
+LSTM_stage3,t+50min,0.74224,114.93
+LSTM_stage3,t+60min,0.73361,118.32

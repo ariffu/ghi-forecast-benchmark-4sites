@@ -1,0 +1,73 @@
+{
+  "location": "Jambi (v2)",
+  "n_total": 262944,
+  "n_day": 123881,
+  "source_table": "ghi_forecast_1h_train_3h_rollback_2021_2025 (v2)",
+  "closure_n_checked": 97789,
+  "closure_violation_pct_gt15": 1.92,
+  "valid_row_pct_standardized": 98.08,
+  "sentinel_summary": [
+    {
+      "column": "ghi",
+      "n_nonnull": 235497,
+      "sentinel_pct": 0.002,
+      "sentinel_n": 4,
+      "stuck_run_pct_daytime_nonzero": 0.006,
+      "stuck_run_n_daytime_nonzero": 13
+    },
+    {
+      "column": "dni",
+      "n_nonnull": 235368,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 2.256,
+      "stuck_run_n_daytime_nonzero": 5309
+    },
+    {
+      "column": "dhi",
+      "n_nonnull": 235497,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 0.0,
+      "stuck_run_n_daytime_nonzero": 0
+    },
+    {
+      "column": "clp_cot",
+      "n_nonnull": 114017,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 0.0,
+      "stuck_run_n_daytime_nonzero": 0
+    }
+  ],
+  "volatility_ratio_kt": 0.3521,
+  "volatility_ratio_clp_cot": 0.0918,
+  "volatility_ratio_kt_over_cot": 3.837,
+  "cross_corr_by_lag_min": {
+    "-60": -0.1538,
+    "-50": -0.1947,
+    "-40": -0.251,
+    "-30": -0.3681,
+    "-20": -0.4227,
+    "-10": -0.4539,
+    "0": -0.4749,
+    "10": -0.4896,
+    "20": -0.4991,
+    "30": -0.5026,
+    "40": -0.5023,
+    "50": -0.4977,
+    "60": -0.4861
+  },
+  "cross_corr_peak_lag_min": 30,
+  "cross_corr_peak_value": -0.5026,
+  "cross_corr_lag0_value": -0.4749,
+  "clot_kt_contradiction_pct": 2.67,
+  "clot_kt_contradiction_n": 2403,
+  "clot_kt_contradiction_n_checked": 90028,
+  "clot_p75": 10.32,
+  "clot_p25": 2.65,
+  "two_product_n_checked": 91857,
+  "two_product_disagreement_pct": 45.1,
+  "two_product_false_positive_pct_of_all_day": 11.8,
+  "two_product_note": "Substitusi ARP: aod_consolidated.sat_retrieval_valid (validitas retrieval aerosol satelit, bukan flag clear_sky langsung seperti Kalbar)."
+}

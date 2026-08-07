@@ -1,0 +1,5 @@
+Metric,Kalbar,Referensi,Diff,Match
+Total Anchor §2.3,0,90579,-90579,✗
+Train (<2024),0,45260,-45260,✗
+Val (2024),0,22692,-22692,✗
+Test (2025),0,22627,-22627,✗

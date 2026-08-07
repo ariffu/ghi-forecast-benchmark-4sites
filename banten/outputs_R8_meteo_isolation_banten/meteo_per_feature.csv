@@ -1,0 +1,7 @@
+feature,test_r2,dR2
+(lean-50 base),0.6804,0.0
+temp_air_c,0.6816,0.0012
+humidity_pct,0.6811,0.0007
+wind_speed_ms,0.6919,0.0116
+rainfall_mm,0.6808,0.0004
+pressure_hpa,0.681,0.0006

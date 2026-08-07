@@ -1,0 +1,25 @@
+Location,Target,Model,n,R²,MAE,RMSE,Skill vs SP
+Banten,avg_t10_t60,catboost_direct,22559,0.8345,67.6,97.0,0.2489
+Banten,avg_t10_t60,lgbm_residual,22559,0.8322,68.0,97.7,0.2438
+Banten,avg_t10_t60,smart_persistence,22559,0.7066,88.7,129.2,0.0
+Bengkulu,avg_t10_t60,catboost_direct,22711,0.9004,62.0,89.7,0.3038
+Bengkulu,avg_t10_t60,lgbm_residual,22711,0.8994,61.8,90.2,0.3004
+Bengkulu,avg_t10_t60,smart_persistence,22711,0.7945,87.2,128.9,0.0
+Jambi,avg_t10_t60,catboost_direct,9511,0.831,72.9,98.1,0.3271
+Jambi,avg_t10_t60,lgbm_residual,9511,0.8336,72.0,97.3,0.3323
+Jambi,avg_t10_t60,smart_persistence,9511,0.6266,104.4,145.8,0.0
+Kalbar,avg_t10_t60,catboost_direct,21386,0.8628,77.0,108.3,0.3154
+Kalbar,avg_t10_t60,lgbm_residual,21386,0.8616,77.0,108.8,0.3123
+Kalbar,avg_t10_t60,smart_persistence,21386,0.7073,113.1,158.3,0.0
+Banten,point_t60,catboost_direct,22559,0.6818,104.6,146.9,0.2058
+Banten,point_t60,lgbm_residual,22559,0.676,105.8,148.3,0.1985
+Banten,point_t60,smart_persistence,22559,0.4955,128.4,185.0,0.0
+Bengkulu,point_t60,catboost_direct,22711,0.792,96.5,137.0,0.2633
+Bengkulu,point_t60,lgbm_residual,22711,0.7891,96.7,137.9,0.2583
+Bengkulu,point_t60,smart_persistence,22711,0.6167,127.6,186.0,0.0
+Jambi,point_t60,catboost_direct,9511,0.6757,114.4,153.0,0.2384
+Jambi,point_t60,lgbm_residual,9511,0.6748,114.1,153.2,0.2373
+Jambi,point_t60,smart_persistence,9511,0.441,143.0,200.9,0.0
+Kalbar,point_t60,catboost_direct,21386,0.7278,120.0,165.6,0.2122
+Kalbar,point_t60,lgbm_residual,21386,0.7233,120.7,167.0,0.2057
+Kalbar,point_t60,smart_persistence,21386,0.5614,137.9,210.2,0.0

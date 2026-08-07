@@ -1,0 +1,29 @@
+{
+  "kt_next_1h_mean": {
+    "baseline": 0.7240449765446997,
+    "cloud_top_trend_30m": 0.7248140451507568,
+    "cloud_top_trend_60m": 0.724920995380643,
+    "beam_diffuse": 0.7279311428853412,
+    "kt_roll_longer": 0.7227376742370958,
+    "synop_extra": 0.7241417638171739,
+    "all_candidates": 0.729290837546134
+  },
+  "kt_next_2h_mean": {
+    "baseline": 0.5053638374584949,
+    "cloud_top_trend_30m": 0.5102163769975656,
+    "cloud_top_trend_60m": 0.5075935086332253,
+    "beam_diffuse": 0.5113268457648485,
+    "kt_roll_longer": 0.5055392793719626,
+    "synop_extra": 0.5082448046567654,
+    "all_candidates": 0.5119892770694194
+  },
+  "kt_next_3h_mean": {
+    "baseline": 0.33091025498554927,
+    "cloud_top_trend_30m": 0.340183043338954,
+    "cloud_top_trend_60m": 0.3380172477318881,
+    "beam_diffuse": 0.3416830538276089,
+    "kt_roll_longer": 0.33599728080550406,
+    "synop_extra": 0.3324406364973692,
+    "all_candidates": 0.34447522629207916
+  }
+}

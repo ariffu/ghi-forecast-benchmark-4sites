@@ -1,0 +1,5 @@
+r2,mae,rmse,skill_vs_sp,lokasi,arm,features,n_feat,model,target,catatan
+0.7283,,,,kalbar,A,F1,50,catboost,point_t60,direkonstruksi dari _r8_kalbar.log (CSV asli gagal tersimpan - UnicodeEncodeError cp1252)
+0.7284,,,,kalbar,A,F2,55,catboost,point_t60,direkonstruksi dari _r8_kalbar.log
+0.8639,,,,kalbar,A,F1,50,catboost,avg_t10_t60,direkonstruksi dari _r8_kalbar.log
+0.8642,,,,kalbar,A,F2,55,catboost,avg_t10_t60,direkonstruksi dari _r8_kalbar.log

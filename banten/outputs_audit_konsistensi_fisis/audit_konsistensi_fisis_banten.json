@@ -1,0 +1,73 @@
+{
+  "location": "Banten",
+  "n_total": 210241,
+  "n_day": 99148,
+  "source_table": "solar_features_base",
+  "closure_n_checked": 99148,
+  "closure_violation_pct_gt15": 7.91,
+  "valid_row_pct_standardized": 92.09,
+  "sentinel_summary": [
+    {
+      "column": "ghi",
+      "n_nonnull": 99148,
+      "sentinel_pct": 0.006,
+      "sentinel_n": 6,
+      "stuck_run_pct_daytime_nonzero": 0.014,
+      "stuck_run_n_daytime_nonzero": 14
+    },
+    {
+      "column": "dni",
+      "n_nonnull": 99148,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 0.286,
+      "stuck_run_n_daytime_nonzero": 284
+    },
+    {
+      "column": "dhi",
+      "n_nonnull": 99148,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 0.216,
+      "stuck_run_n_daytime_nonzero": 214
+    },
+    {
+      "column": "clp_cot",
+      "n_nonnull": 90203,
+      "sentinel_pct": 0.0,
+      "sentinel_n": 0,
+      "stuck_run_pct_daytime_nonzero": 0.0,
+      "stuck_run_n_daytime_nonzero": 0
+    }
+  ],
+  "volatility_ratio_kt": 0.329,
+  "volatility_ratio_clp_cot": 0.0899,
+  "volatility_ratio_kt_over_cot": 3.661,
+  "cross_corr_by_lag_min": {
+    "-60": -0.3642,
+    "-50": -0.3936,
+    "-40": -0.4222,
+    "-30": -0.4478,
+    "-20": -0.4693,
+    "-10": -0.5066,
+    "0": -0.5201,
+    "10": -0.5245,
+    "20": -0.5209,
+    "30": -0.5103,
+    "40": -0.5013,
+    "50": -0.4903,
+    "60": -0.4777
+  },
+  "cross_corr_peak_lag_min": 10,
+  "cross_corr_peak_value": -0.5245,
+  "cross_corr_lag0_value": -0.5201,
+  "clot_kt_contradiction_pct": 2.09,
+  "clot_kt_contradiction_n": 1885,
+  "clot_kt_contradiction_n_checked": 90203,
+  "clot_p75": 8.92,
+  "clot_p25": 2.41,
+  "two_product_n_checked": 12434,
+  "two_product_disagreement_pct": 18.5,
+  "two_product_false_positive_pct_of_all_day": 0.4,
+  "two_product_note": "Substitusi ARP: aod_pondok_betung_clean.qa_clear (bukan produk aerosol-retrieval terpisah seperti Kalbar, cakupan terbatas 1 stasiun)."
+}

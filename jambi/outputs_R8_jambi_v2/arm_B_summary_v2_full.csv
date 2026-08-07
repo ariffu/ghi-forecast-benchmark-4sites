@@ -1,0 +1,6 @@
+model,type,r2_mean,r2_std,mae_mean,rmse_mean,n_seeds
+lgbm,GBM,0.6937,,108.8,150.0,1
+catboost,GBM,0.6928,,108.7,150.2,1
+transformer,DL,0.6808,0.0002,111.2,153.1,3
+lstm,DL,0.6501,0.001,116.1,160.3,3
+mlp,DL,0.6092,0.0006,114.4,169.4,3

@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "train_shape": [
+    38321,
+    18,
+    60
+  ],
+  "val_shape": [
+    9185,
+    18,
+    60
+  ],
+  "lookback_steps": 18,
+  "n_features": 60,
+  "best_model_file": "best_lstm_lb18_h6.keras",
+  "final_model_file": "final_lstm_lb18_h6.keras"
+}

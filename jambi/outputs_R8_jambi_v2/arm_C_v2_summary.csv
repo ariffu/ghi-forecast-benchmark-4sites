@@ -1,0 +1,2 @@
+location,n_features_baseline,n_features_pruned,reduction_pct,r2_baseline_val,r2_baseline_test_fullconfig,r2_pruned_test_fullconfig,delta_r2_test,selected_features
+Jambi (v2),50,20,60.0,0.6875820426391682,0.6928230983566098,0.6919799558396118,0.0008431425169980189,"ghi_roll_30m_mean, ghi_roll_60m_std, ghi_roll_180m_mean, ghi_roll_180m_std, clp_cot, clp_cot_lag_10m, clp_cot_delta_10m, clp_cot_delta_30m, clp_cot_delta_180m, clp_cot_roll_180m_mean, clp_cth_m, clp_ctt_k, clp_cer, hour_sin, hour_cos, doy_sin, doy_cos, ghi_cs_t60, elev_sin_t60, smart_persist"

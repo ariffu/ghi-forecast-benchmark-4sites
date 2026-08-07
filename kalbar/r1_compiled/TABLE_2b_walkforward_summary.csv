@@ -1,0 +1,17 @@
+Location,Metric,Mean,Std
+Bengkulu,R²,0.7944,0.0197
+Bengkulu,MAE,93.91,7.91
+Bengkulu,RMSE,135.83,9.57
+Bengkulu,Skill vs SP,0.2542,0.0153
+Jambi,R²,0.6249,0.0533
+Jambi,MAE,119.80,4.01
+Jambi,RMSE,160.85,5.10
+Jambi,Skill vs SP,0.2171,0.0272
+Banten,R²,0.6429,0.0574
+Banten,MAE,112.31,12.02
+Banten,RMSE,156.33,15.79
+Banten,Skill vs SP,0.2102,0.0194
+Kalbar,R²,0.6628,0.0424
+Kalbar,MAE,133.53,9.89
+Kalbar,RMSE,184.55,12.93
+Kalbar,Skill vs SP,0.1737,0.0401

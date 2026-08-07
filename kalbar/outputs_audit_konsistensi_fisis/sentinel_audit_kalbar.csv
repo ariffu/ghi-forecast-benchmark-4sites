@@ -1,0 +1,5 @@
+column,n_nonnull,sentinel_pct,sentinel_n,stuck_run_pct_daytime_nonzero,stuck_run_n_daytime_nonzero
+ghi,99215,0.013,13,0.023,23
+dni,99215,0.001,1,0.238,236
+dhi,99215,0.0,0,0.214,212
+clp_cot,62585,0.0,0,0.0,0
