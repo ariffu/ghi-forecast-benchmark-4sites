@@ -1,8 +1,0 @@
-group,train_nan,test_nan,shift
-F1_core_GHI,0.0,0.0,0.0
-F1_CLP,0.1755,0.107,-0.0686
-F1_deterministic,0.0,0.0,0.0
-RAD_raw,0.0044,0.0003,-0.0041
-RAD_derived,0.0,0.0,0.0
-AWS_rolling,0.0007,0.0001,-0.0006
-AWS_instant,0.0,0.0,0.0

@@ -1,9 +1,0 @@
-r2,mae,rmse,skill_vs_sp,lokasi,arm,features,n_feat,model,target,best_iter
-0.792,96.5,137.0,0.2633,bengkulu,A,F1,50,catboost,point_t60,
-0.7891,96.7,137.9,0.2583,bengkulu,A,F1,50,lgbm,point_t60,400.0
-0.7925,96.6,136.8,0.2642,bengkulu,A,F2,55,catboost,point_t60,
-0.7901,96.9,137.6,0.26,bengkulu,A,F2,55,lgbm,point_t60,475.0
-0.9004,62.0,89.7,0.3038,bengkulu,A,F1,50,catboost,avg_t10_t60,
-0.8994,61.8,90.2,0.3004,bengkulu,A,F1,50,lgbm,avg_t10_t60,477.0
-0.8999,62.6,90.0,0.3019,bengkulu,A,F2,55,catboost,avg_t10_t60,
-0.8999,62.1,90.0,0.3021,bengkulu,A,F2,55,lgbm,avg_t10_t60,465.0

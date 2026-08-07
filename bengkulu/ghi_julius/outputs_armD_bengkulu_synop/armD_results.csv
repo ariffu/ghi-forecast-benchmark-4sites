@@ -1,6 +1,0 @@
-config,model,target,n,r2,mae,rmse,skill_vs_sp,best_iter
-F1_baseline_50feat,lgbm_residual,point_t60,22711,0.7891,96.7,137.9,0.2583,400.0
-F1_baseline_50feat,catboost_direct,point_t60,22711,0.792,96.5,137.0,0.2633,959.0
-F1D_synop_59feat,smart_persistence,point_t60,22711,0.6167,127.6,186.0,0.0,
-F1D_synop_59feat,lgbm_residual,point_t60,22711,0.7899,96.6,137.7,0.2596,465.0
-F1D_synop_59feat,catboost_direct,point_t60,22711,0.7915,96.7,137.2,0.2625,798.0
