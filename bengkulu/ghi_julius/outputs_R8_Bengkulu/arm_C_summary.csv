@@ -1,0 +1,2 @@
+location,n_features_baseline,n_features_pruned,reduction_pct,r2_baseline_val,r2_baseline_test_fullconfig,r2_pruned_test_fullconfig,delta_r2_test,selected_features
+Bengkulu,50,19,62.0,0.7992771487670816,0.7919902873414674,0.7921164969947219,-0.0001262096532544943,"ghi_lag_180m, ghi_roll_180m_mean, ghi_delta_60m, kt_now, kt_roll60m_mean, clp_cot, clp_cot_lag_10m, clp_cot_delta_10m, clp_cot_delta_180m, clp_cot_roll_180m_mean, clp_ctt_k, clp_cer, hour_sin, doy_sin, doy_cos, ghi_cs_t60, elev_sin_t60, smart_persist, smart_persist_avg"
