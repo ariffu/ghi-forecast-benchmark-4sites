@@ -1,6 +1,6 @@
 # GHI Forecast Benchmark — 4 Sites (Bengkulu, Banten, Kalimantan Barat, Jambi)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21833225.svg)](https://doi.org/10.5281/zenodo.21833225)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21833224.svg)](https://doi.org/10.5281/zenodo.21833224)
 
 Harmonised benchmark scripts and per-site result summaries for the GHI
 (Global Horizontal Irradiance) forecasting study across four Indonesian
@@ -56,4 +56,4 @@ protocol (feature recipe, split, models, evaluation) is specified in
 
 See [`CITATION.cff`](CITATION.cff) for author and version metadata.
 Archived releases of this repository are permanently citable via Zenodo:
-[10.5281/zenodo.21833225](https://doi.org/10.5281/zenodo.21833225).
+[10.5281/zenodo.21833224](https://doi.org/10.5281/zenodo.21833224).

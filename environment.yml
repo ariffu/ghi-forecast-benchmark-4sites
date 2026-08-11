@@ -2,7 +2,7 @@
 #   "How predictable is hour-ahead solar irradiance in the humid tropics?
 #    A harmonised four-site benchmark from Indonesia's national observation network"
 #   Repository: https://github.com/ariffu/ghi-forecast-benchmark-4sites
-#   Archive:    https://doi.org/10.5281/zenodo.21833225
+#   Archive:    https://doi.org/10.5281/zenodo.21833224
 #
 # Create with:  conda env create -f environment.yml
 # Activate:     conda activate ghi-benchmark-4sites
