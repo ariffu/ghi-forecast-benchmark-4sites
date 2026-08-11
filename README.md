@@ -13,6 +13,7 @@ paper submission.
 bengkulu/
   duckdb_bengkulu/       audit & anchor-count scripts, SYNOP null audit
   ghi_forecast_pipeline/ numbered end-to-end pipeline scripts (01-.. build/train/walkforward)
+  ghi_julius/            R1/R8 benchmark scripts (armA/B/C) + bootstrap + core results
 banten/                  audit scripts, R1/R8 outputs, learning curve, meteo isolation
 kalbar/                  build/train scripts, R1/R8 outputs, anchor audits
 jambi/                   build/train/ablation scripts, R1/R8 outputs
