@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or the harmonised benchmark scripts and
+  per-site results it contains, please cite it using the metadata below.
+  A citation for the accompanying journal paper will be added here once
+  it is published.
+type: software
+title: >-
+  ghi-forecast-benchmark-4sites: Harmonised hour-ahead GHI forecasting
+  benchmark scripts and per-site results (Banten, Bengkulu, Jambi, West
+  Kalimantan)
+authors:
+  - family-names: Ariffudin
+    affiliation: >-
+      Department of Physics, Faculty of Mathematics and Science,
+      Universitas Indonesia, Depok, Indonesia
+    orcid: "https://orcid.org/0009-0008-3244-6054"
+  - given-names: Ardhasena
+    family-names: Sopaheluwakan
+    affiliation: >-
+      Badan Meteorologi, Klimatologi, dan Geofisika (BMKG), Jakarta,
+      Indonesia
+    orcid: "https://orcid.org/0000-0002-4532-854X"
+  - given-names: Arief
+    family-names: Sudarmaji
+    affiliation: >-
+      Department of Physics, Faculty of Mathematics and Science,
+      Universitas Indonesia, Depok, Indonesia
+    orcid: "https://orcid.org/0000-0002-0086-6758"
+  - given-names: Supriyanto Ardjo
+    family-names: Pawiro
+    affiliation: >-
+      Department of Physics, Faculty of Mathematics and Science,
+      Universitas Indonesia, Depok, Indonesia
+    orcid: "https://orcid.org/0000-0002-0028-1442"
+version: 1.0.0
+date-released: "2026-08-07"
+doi: 10.5281/zenodo.21833225
+url: "https://github.com/ariffu/ghi-forecast-benchmark-4sites"
+repository-code: "https://github.com/ariffu/ghi-forecast-benchmark-4sites"
+license: CC-BY-4.0
