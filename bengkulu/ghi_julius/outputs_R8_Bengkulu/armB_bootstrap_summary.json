@@ -1,0 +1,27 @@
+{
+  "site": "bengkulu",
+  "N_test": 22711,
+  "point_r2": {
+    "catboost": 0.7923,
+    "lgbm": 0.7908,
+    "mlp": 0.7908,
+    "transformer": 0.7882,
+    "lstm": 0.7661
+  },
+  "seed_std": {
+    "catboost": 0.0003,
+    "lgbm": 0.0002,
+    "mlp": 0.0003,
+    "transformer": 0.0009,
+    "lstm": 0.003
+  },
+  "top4_spread_point": 0.0041,
+  "top4_spread_ci": [
+    0.0019,
+    0.0067
+  ],
+  "P_spread_le_0.01": 1.0,
+  "block": 78,
+  "B": 5000,
+  "note_gbm_seeds": "3 seeds (bootstrap); Tabel 2c memakai 1 seed"
+}

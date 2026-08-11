@@ -1,0 +1,11 @@
+pair,dR2,ci_lo,ci_hi,p,sig_0.05
+catboost-lgbm,0.0015,0.0003,0.0028,0.0132,YES
+catboost-mlp,0.0015,-0.0007,0.0038,0.17,no
+catboost-transformer,0.0041,0.0017,0.0067,0.0016,YES
+lgbm-mlp,0.0,-0.0023,0.0024,0.9872,no
+lgbm-transformer,0.0026,0.0002,0.0051,0.0372,YES
+mlp-transformer,0.0026,0.0004,0.0048,0.02,YES
+catboost-lstm,0.0263,0.0209,0.0322,0.0,YES
+lgbm-lstm,0.0248,0.0196,0.0305,0.0,YES
+mlp-lstm,0.0248,0.0192,0.031,0.0,YES
+transformer-lstm,0.0222,0.0169,0.0279,0.0,YES

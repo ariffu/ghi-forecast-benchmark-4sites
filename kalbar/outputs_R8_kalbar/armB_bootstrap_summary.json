@@ -1,0 +1,26 @@
+{
+  "site": "Kalbar",
+  "N_test": 21386,
+  "point_r2": {
+    "catboost": 0.7279,
+    "lgbm": 0.7274,
+    "mlp": 0.723,
+    "transformer": 0.7273,
+    "lstm": 0.6885
+  },
+  "point_r2_top4": [
+    0.7279,
+    0.7274,
+    0.723,
+    0.7273
+  ],
+  "top4_spread_point": 0.0049,
+  "top4_spread_ci": [
+    0.0023,
+    0.0092
+  ],
+  "top4_spread_median": 0.0056,
+  "P_spread_le_0.01": 0.992,
+  "block": 78,
+  "B": 5000
+}

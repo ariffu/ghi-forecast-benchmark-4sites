@@ -1,0 +1,19 @@
+{
+  "N_test": 22559,
+  "point_r2": {
+    "catboost": 0.6817,
+    "lgbm": 0.6791,
+    "mlp": 0.6788,
+    "transformer": 0.6781,
+    "lstm": 0.6342
+  },
+  "top4_spread_point": 0.0036,
+  "top4_spread_median": 0.004,
+  "top4_spread_ci": [
+    0.0019,
+    0.0072
+  ],
+  "P_spread_le_0.01": 1.0,
+  "block": 78,
+  "B": 5000
+}
