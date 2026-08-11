@@ -1,0 +1,60 @@
+# Reproducible environment for:
+#   "How predictable is hour-ahead solar irradiance in the humid tropics?
+#    A harmonised four-site benchmark from Indonesia's national observation network"
+#   Repository: https://github.com/ariffu/ghi-forecast-benchmark-4sites
+#   Archive:    https://doi.org/10.5281/zenodo.21833225
+#
+# Create with:  conda env create -f environment.yml
+# Activate:     conda activate ghi-benchmark-4sites
+#
+# NOTE ON PINNING
+#   Versions marked "verified" were recorded from the HPC environment used for the
+#   reported runs. Versions below were pinned 2026-08-11 via `pip freeze` against
+#   C:\Program Files\Python39 (python 3.9.10) on the author's local machine — the
+#   environment identified as closest to the one used for the reported R1/R8/bootstrap
+#   runs. This is a KNOWN MISMATCH against the "python=3.11 (verified)" line below,
+#   which was recorded separately and not re-confirmed against this environment; if the
+#   true training environment was in fact 3.11, re-run `pip freeze` there and replace
+#   these pins before the repository release that accompanies the paper.
+#   Do NOT invent version numbers — an unpinned entry is more honest than a wrong pin.
+
+name: ghi-benchmark-4sites
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ---- core ----
+  - python=3.11                 # verified (~3.11) — NOT re-confirmed against the pins below (pip freeze source was python 3.9.10)
+  - pip
+
+  # ---- data handling ----
+  - pandas=3.0.3                # verified
+  - numpy=2.4.6                 # verified
+  - duckdb=1.4.4                 # pip freeze 2026-08-11 — SQL feature construction & per-site analytical DBs
+  - pyarrow=21.0.0                # pip freeze 2026-08-11 — parquet I/O
+
+  # ---- classical ML ----
+  - scikit-learn=1.8.0          # verified
+  - lightgbm=4.5.0                # pip freeze 2026-08-11 — reference model (residual form)
+  - catboost=1.2.10               # pip freeze 2026-08-11 — sensitivity check (direct form)
+  - xgboost=2.1.4                 # pip freeze 2026-08-11 — site-specific production comparison
+
+  # ---- deep-learning comparators ----
+  - pytorch=2.8.0                 # pip freeze 2026-08-11 — MLP, Transformer, LSTM comparators
+  #   If the reported runs used CUDA, record the CUDA/cuDNN build here as well.
+
+  # ---- solar geometry & clear-sky ----
+  - pvlib=0.13.0                  # pip freeze 2026-08-11 — site-specific pipelines (Ineichen clear sky)
+  #   The harmonised benchmark uses the simple geometric reference (Eq. 5), not pvlib;
+  #   pvlib is required only to reproduce the site-specific production variants.
+
+  # ---- hyperparameter search ----
+  - optuna=4.9.0                  # pip freeze 2026-08-11 — tuning contributed < 0.001 R² everywhere
+
+  # ---- figures ----
+  - matplotlib=3.9.1              # pip freeze 2026-08-11 — Figs. 2-7 (scripts make_fig*.py)
+
+  # ---- statistics ----
+  - scipy=1.13.1                  # pip freeze 2026-08-11 — paired block-bootstrap, Holm correction
