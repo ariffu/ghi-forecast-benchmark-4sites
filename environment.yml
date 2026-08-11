@@ -17,6 +17,18 @@
 #   true training environment was in fact 3.11, re-run `pip freeze` there and replace
 #   these pins before the repository release that accompanies the paper.
 #   Do NOT invent version numbers — an unpinned entry is more honest than a wrong pin.
+#
+# SOLVABILITY CHECK (2026-08-11): conda/mamba are not installed on the machine that
+#   wrote this file, so `conda create --dry-run` could not be run directly. As a
+#   substitute, every pinned package's `requires_python` metadata was queried from
+#   PyPI's JSON API (pypi.org/pypi/<pkg>/<version>/json). All 13 pins declare Python
+#   floors at or below 3.11 (pandas 3.0.3 / numpy 2.4.6 / scikit-learn 1.8.0 actually
+#   *require* >=3.11, which independently confirms they could not have come from the
+#   python-3.9.10 pip-freeze machine either — consistent with, not contradicting, the
+#   mismatch noted above), so no version-metadata conflict exists against python=3.11.
+#   This is NOT the same as an actual successful install: no machine with Python 3.11
+#   was available to run `conda env create` / `pip install` end-to-end against this
+#   exact file. Treat that as the remaining open verification step.
 
 name: ghi-benchmark-4sites
 
