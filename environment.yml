@@ -7,28 +7,35 @@
 # Create with:  conda env create -f environment.yml
 # Activate:     conda activate ghi-benchmark-4sites
 #
-# NOTE ON PINNING
-#   Versions marked "verified" were recorded from the HPC environment used for the
-#   reported runs. Versions below were pinned 2026-08-11 via `pip freeze` against
-#   C:\Program Files\Python39 (python 3.9.10) on the author's local machine — the
-#   environment identified as closest to the one used for the reported R1/R8/bootstrap
-#   runs. This is a KNOWN MISMATCH against the "python=3.11 (verified)" line below,
-#   which was recorded separately and not re-confirmed against this environment; if the
-#   true training environment was in fact 3.11, re-run `pip freeze` there and replace
-#   these pins before the repository release that accompanies the paper.
+# PROVENANCE (revised 2026-08-11, superseding the v1.1.0 pinning)
+#   v1.1.0 of this file mixed two sources: four packages (python, pandas, numpy,
+#   scikit-learn) labelled "verified" from a note claiming an HPC environment, and the
+#   rest from `pip freeze` against C:\Program Files\Python39 (python 3.9.10) on the
+#   author's local machine. That HPC note turned out to be unconfirmed, and forensic
+#   evidence contradicts it directly: the production model artifacts
+#   (04_Eksperimen/Banten/Model/{xgboost.json, production/prod_xgboost.json,
+#   production_slim/prod_xgboost.json}) embed `"version":[2,1,4]`, and
+#   production/prod_catboost.cbm embeds the string "1.2.10" — both exactly matching the
+#   pip-freeze/python-3.9.10 pins, not the "verified" ones. Embedded library versions
+#   are written automatically by the library at save time, not typed by hand, making
+#   this stronger evidence than the unconfirmed HPC note.
+#   ALL pins below are therefore now taken from the single Python 3.9.10 environment
+#   (`pip freeze` + `python --version`, both run 2026-08-11), replacing the earlier
+#   "verified" python=3.11/pandas=3.0.3/numpy=2.4.6/scikit-learn=1.8.0 line, which is
+#   not reproducible on any Python installation found on the author's machine (only
+#   3.9.10 and 3.14.6 are installed — never 3.11).
+#   Caveat: the checked artifacts are from the Banten production pipeline, not
+#   necessarily the exact R1/R8 harmonised-benchmark run that produced the paper's
+#   tables. They establish the real Python/library environment on this author's
+#   machine; if a genuinely different environment (e.g. an actual HPC cluster) was used
+#   for specific runs, that would need its own separate export.
 #   Do NOT invent version numbers — an unpinned entry is more honest than a wrong pin.
 #
 # SOLVABILITY CHECK (2026-08-11): conda/mamba are not installed on the machine that
 #   wrote this file, so `conda create --dry-run` could not be run directly. As a
 #   substitute, every pinned package's `requires_python` metadata was queried from
-#   PyPI's JSON API (pypi.org/pypi/<pkg>/<version>/json). All 13 pins declare Python
-#   floors at or below 3.11 (pandas 3.0.3 / numpy 2.4.6 / scikit-learn 1.8.0 actually
-#   *require* >=3.11, which independently confirms they could not have come from the
-#   python-3.9.10 pip-freeze machine either — consistent with, not contradicting, the
-#   mismatch noted above), so no version-metadata conflict exists against python=3.11.
-#   This is NOT the same as an actual successful install: no machine with Python 3.11
-#   was available to run `conda env create` / `pip install` end-to-end against this
-#   exact file. Treat that as the remaining open verification step.
+#   PyPI's JSON API (pypi.org/pypi/<pkg>/<version>/json); all pins are compatible with
+#   python=3.9.10. This is a metadata check, not an actual end-to-end install test.
 
 name: ghi-benchmark-4sites
 
@@ -38,20 +45,20 @@ channels:
 
 dependencies:
   # ---- core ----
-  - python=3.11                 # verified (~3.11) — NOT re-confirmed against the pins below (pip freeze source was python 3.9.10)
+  - python=3.9.10                # pip freeze + `python --version` 2026-08-11, confirmed by embedded model-artifact versions (see PROVENANCE)
   - pip
 
   # ---- data handling ----
-  - pandas=3.0.3                # verified
-  - numpy=2.4.6                 # verified
-  - duckdb=1.4.4                 # pip freeze 2026-08-11 — SQL feature construction & per-site analytical DBs
+  - pandas=2.2.2                  # pip freeze 2026-08-11
+  - numpy=1.26.0                  # pip freeze 2026-08-11
+  - duckdb=1.4.4                  # pip freeze 2026-08-11 — SQL feature construction & per-site analytical DBs
   - pyarrow=21.0.0                # pip freeze 2026-08-11 — parquet I/O
 
   # ---- classical ML ----
-  - scikit-learn=1.8.0          # verified
+  - scikit-learn=1.5.1             # pip freeze 2026-08-11
   - lightgbm=4.5.0                # pip freeze 2026-08-11 — reference model (residual form)
-  - catboost=1.2.10               # pip freeze 2026-08-11 — sensitivity check (direct form)
-  - xgboost=2.1.4                 # pip freeze 2026-08-11 — site-specific production comparison
+  - catboost=1.2.10               # pip freeze 2026-08-11 — sensitivity check (direct form); confirmed embedded in production/prod_catboost.cbm
+  - xgboost=2.1.4                 # pip freeze 2026-08-11 — site-specific production comparison; confirmed embedded in xgboost.json artifacts
 
   # ---- deep-learning comparators ----
   - pytorch=2.8.0                 # pip freeze 2026-08-11 — MLP, Transformer, LSTM comparators
