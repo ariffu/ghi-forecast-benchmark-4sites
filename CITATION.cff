@@ -33,7 +33,7 @@ authors:
       Department of Physics, Faculty of Mathematics and Science,
       Universitas Indonesia, Depok, Indonesia
     orcid: "https://orcid.org/0000-0002-0028-1442"
-version: 1.1.0
+version: 1.2.0
 date-released: "2026-08-11"
 doi: 10.5281/zenodo.21833224
 url: "https://github.com/ariffu/ghi-forecast-benchmark-4sites"
